@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Text first */}
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
-        <p className="text-lg">Hi, I'm Suseetha Venkat</p>
+        <p className="text-lg">Hi, I&apos;m am Suseetha Venkat</p>
       </div>
 
       {/* Photo next */}
