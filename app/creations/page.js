@@ -1,75 +1,88 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function Creations() {
   const projects = [
     {
       title: "Healthcare Live Chat System",
       description:
-        "Designed a real-time live chat system enabling patients to interact with admins via WebSocket-based messaging. Implemented a custom AI ChatBot that takes over when the admin is offline, collects patient details and ensures uninterrupted interaction. Integrated a 'Go to Live Chat' feature allowing the admin to seamlessly resume ongoing conversations.",
+        "Built a real-time communication platform enabling patients to interact with admins using WebSockets. Integrated an AI ChatBot that collects patient details when admins are offline and ensures uninterrupted engagement. Added a seamless 'Go to Live Chat' handover for admins to resume conversations instantly.",
+      tags: ["WebSockets", "AI Chatbot", "Real-time", "Healthcare"],
+      year: "2025",
     },
     {
       title: "Student Database Management System",
       description:
-        "Developed a student management portal enabling admins to view and edit student payment records and fee status, improving data access efficiency by 60%. Implemented secure role-based access control and intuitive UI to streamline data entry.",
+        "Developed a secure and scalable student portal for managing fee payments, records, and status tracking. Implemented role-based access control for admins and built an intuitive UI that improved data efficiency by 60%.",
+      tags: ["Django", "MySQL", "RBAC", "UI/UX"],
+      year: "2024",
     },
     {
       title: "Climate Analysis Dashboard",
       description:
-        "Analyzed 2+ years of historical climate data using Python, Pandas, and NumPy, helping identify weather trends across districts. Created a Python-based dashboard for weather condition viewing with a user-friendly interface, enhancing decision-making.",
+        "Analyzed over 2 years of district-level weather data using Python, Pandas, and NumPy. Built a dashboard that helps visualize climate patterns and identify trends, enabling better decision-making with a clean, interactive interface.",
+      tags: ["Python", "Pandas", "NumPy", "DataViz"],
+      year: "2023",
     },
   ];
 
-  const [current, setCurrent] = useState(0);
-
-  // Auto-slide every 6 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % projects.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [projects.length]);
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })]);
 
   return (
-    <section className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center px-6 py-12">
+    <section className="min-h-screen bg-gray-950 text-white flex flex-col items-center px-6 py-16">
       <h2 className="text-4xl font-extrabold mb-12 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
         ✨ My Creations
       </h2>
 
-      <div className="relative w-full max-w-3xl h-80 overflow-hidden rounded-2xl shadow-2xl border border-gray-700">
-        <AnimatePresence>
-          <motion.div
-            key={current}
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.7 }}
-            className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-8 flex flex-col justify-center items-center text-center"
-          >
-            <h3 className="text-2xl font-bold text-pink-400 mb-4">
-              {projects[current].title}
-            </h3>
-            <p className="text-gray-300 leading-relaxed">
-              {projects[current].description}
-            </p>
-          </motion.div>
-        </AnimatePresence>
+      {/* Embla Carousel */}
+      <div className="overflow-hidden w-full max-w-3xl" ref={emblaRef}>
+        <div className="flex">
+          {projects.map((proj, index) => (
+            <motion.article
+              key={index}
+              className="flex-[0_0_100%] px-4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border border-gray-700 shadow-lg hover:shadow-purple-500/30 transition-all h-full flex flex-col justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold text-pink-400 mb-3">
+                    {proj.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                    {proj.description}
+                  </p>
+                </div>
+
+                <div>
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {proj.tags.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="px-3 py-1 bg-gray-800/60 text-purple-300 text-xs rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Year */}
+                  <p className="text-gray-500 text-xs">📅 {proj.year}</p>
+                </div>
+              </div>
+            </motion.article>
+          ))}
+        </div>
       </div>
 
-      {/* Dots navigation */}
-      <div className="flex mt-6 space-x-3">
-        {projects.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full ${
-              current === index ? "bg-pink-500" : "bg-gray-500"
-            }`}
-          />
-        ))}
-      </div>
+      {/* Helper text for mobile */}
+      <p className="mt-6 text-gray-400 text-sm">Swipe ➡ or wait for auto-slide</p>
     </section>
   );
 }
