@@ -14,11 +14,11 @@ export default function Creations() {
       year: "2025",
     },
     {
-      title: "Student Database Management System",
+      title: "Resume ATS Scanner",
       description:
-        "Developed a secure and scalable student portal for managing fee payments, records, and status tracking. Implemented role-based access control for admins and built an intuitive UI that improved data efficiency by 60%.",
-      tags: ["Django", "MySQL", "RBAC", "UI/UX"],
-      year: "2024",
+        "•	Implemented a Python + Streamlit application that uses NLTK for text preprocessing and keyword matching to compare resumes with job descriptions, generating an ATS-style score for better shortlisting.",
+      tags: ["Python","Pandas","NumPy","Streamlit","NLTK"],
+      year: "2025",
     },
     {
       title: "Climate Analysis Dashboard",
