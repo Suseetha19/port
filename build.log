@@ -1,0 +1,35 @@
+
+> suseeportfolio@0.1.0 build
+> next build --turbopack
+
+   ▲ Next.js 15.5.0 (Turbopack)
+
+   Creating an optimized production build ...
+ ✓ Finished writing to disk in 246ms
+ ✓ Compiled successfully in 34.4s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/9) ...
+   Generating static pages (2/9) 
+   Generating static pages (4/9) 
+   Generating static pages (6/9) 
+ ✓ Generating static pages (9/9)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                         Size  First Load JS
+┌ ○ /                            5.23 kB         123 kB
+├ ○ /_not-found                      0 B         118 kB
+├ ○ /about                        1.2 kB         156 kB
+├ ○ /collaboration                   0 B         118 kB
+├ ○ /creations                   9.16 kB         164 kB
+└ ○ /skills                          0 B         118 kB
++ First Load JS shared by all     123 kB
+  ├ chunks/0656f51f27ce398d.js   17.1 kB
+  ├ chunks/202abb9aed9e828b.js   59.2 kB
+  ├ chunks/47f477e3d2ef265b.js   20.4 kB
+  └ other shared chunks (total)  26.6 kB
+
+
+○  (Static)  prerendered as static content
+

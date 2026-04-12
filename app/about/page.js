@@ -23,11 +23,10 @@ export default function AboutPage() {
         className="text-lg max-w-3xl text-center leading-relaxed text-gray-300"
       >
         Hello! I’m <span className="text-purple-400 font-semibold">Suseetha</span>, 
-        a results-driven <span className="text-green-400 font-semibold">Full Stack Developer</span> 
-        with a strong foundation in modern web technologies. I specialize in 
-        building <span className="text-blue-400">scalable applications</span>, 
-        crafting <span className="text-pink-400">intuitive user interfaces</span>, 
-        and turning ideas into impactful digital solutions.
+        a passionate <span className="text-green-400 font-semibold">Data Analyst </span> 
+        with strong skills in <span className="text-blue-400">SQL, Microsoft Excel, and Power BI</span>. 
+        I specialize in transforming raw data into meaningful insights and building 
+        <span className="text-pink-400"> interactive dashboards</span> to support data-driven decision-making.
       </motion.p>
 
       {/* Skills / Highlights Section */}
@@ -38,30 +37,31 @@ export default function AboutPage() {
         className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 w-full max-w-4xl"
       >
         <div className="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-          <h3 className="text-xl font-semibold text-purple-400 mb-3">Frontend</h3>
+          <h3 className="text-xl font-semibold text-purple-400 mb-3">Data Analysis</h3>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Skilled in <span className="text-white">React.js</span>, 
-            <span className="text-white"> Next.js</span>, and modern UI frameworks 
-            to deliver elegant, responsive, and user-focused designs.
+            Experienced in <span className="text-white">data cleaning</span>, 
+            <span className="text-white"> transformation</span>, and 
+            <span className="text-white"> analysis</span> to identify patterns and trends 
+            from structured datasets.
           </p>
         </div>
 
         <div className="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-          <h3 className="text-xl font-semibold text-blue-400 mb-3">Backend</h3>
+          <h3 className="text-xl font-semibold text-blue-400 mb-3">Visualization</h3>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Experienced with <span className="text-white">Django</span>, 
-            <span className="text-white"> Node.js</span>, and REST APIs, 
-            ensuring performance, security, and scalability.
+            Skilled in building <span className="text-white">interactive dashboards</span> using 
+            <span className="text-white"> Power BI</span> and 
+            <span className="text-white"> Excel</span> to present insights clearly.
           </p>
         </div>
 
         <div className="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-          <h3 className="text-xl font-semibold text-green-400 mb-3">Other Skills</h3>
+          <h3 className="text-xl font-semibold text-green-400 mb-3">Technical Skills</h3>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Strong problem-solving mindset with knowledge of 
-            <span className="text-white"> Git</span>, 
-            <span className="text-white"> Cloud Services</span>, 
-            and collaborative development practices.
+            Proficient in <span className="text-white">SQL</span>, 
+            <span className="text-white"> Excel</span>, and 
+            <span className="text-white"> Power BI</span>, with a strong 
+            focus on problem-solving and data-driven solutions.
           </p>
         </div>
       </motion.div>
@@ -73,7 +73,7 @@ export default function AboutPage() {
         transition={{ duration: 1, delay: 1 }}
         className="mt-12 text-gray-400 italic text-center max-w-2xl"
       >
-        “I believe in creating technology that is not only functional but also inspiring.”
+        “I believe in transforming data into actionable insights that drive smarter decisions.”
       </motion.p>
     </div>
   );

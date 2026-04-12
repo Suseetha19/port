@@ -7,25 +7,49 @@ import Autoplay from "embla-carousel-autoplay";
 export default function Creations() {
   const projects = [
     {
-      title: "Healthcare Live Chat System",
+      title: "UK Road Accident Analysis Dashboard",
       description:
-        "Built a real-time communication platform enabling patients to interact with admins using WebSockets. Integrated an AI ChatBot that collects patient details when admins are offline and ensures uninterrupted engagement. Added a seamless 'Go to Live Chat' handover for admins to resume conversations instantly.",
-      tags: ["WebSockets", "AI Chatbot", "Real-time", "Healthcare"],
+        "Examined road accident datasets to uncover patterns in accident frequency, severity, and environmental conditions. Performed data preprocessing and transformation to ensure accuracy and consistency. Created calculated measures using DAX to evaluate key metrics and relationships. Designed an interactive dashboard to highlight high-risk locations, vehicle involvement, and road condition impacts for safety insights.",
+      tools: ["Power BI", "DAX", "Power Query", "Data Modeling"],
+      year: "2025",
+      pdf: "/UK.pdf",
+    },
+    {
+      title: "Movies Analysis Dashboard",
+      description:
+        "Explored movie datasets to identify trends in ratings, revenue, genres, and audience engagement. Conducted data cleaning and transformation to maintain structured and reliable data. Generated calculated metrics using DAX for performance evaluation. Designed a dynamic dashboard to present genre-wise distribution, revenue insights, and popularity patterns effectively.",
+      tools: ["Power BI", "DAX", "Data Visualization", "Power Query"],
       year: "2025",
     },
     {
-      title: "Resume ATS Scanner",
+      title: "Sales Analysis Dashboard",
       description:
-        "•	Implemented a Python + Streamlit application that uses NLTK for text preprocessing and keyword matching to compare resumes with job descriptions, generating an ATS-style score for better shortlisting.",
-      tags: ["Python","Pandas","NumPy","Streamlit","NLTK"],
+        "Evaluated retail sales data containing 2000+ transactions to identify patterns in revenue, profit, and customer purchasing behavior. Organized and refined datasets using Excel functions for accurate reporting. Constructed Pivot Tables and charts to summarize key metrics. Created an interactive dashboard to present regional performance, product trends, and monthly sales insights.",
+      tools: ["Microsoft Excel", "Pivot Tables", "Charts", "Slicers","Power Query","Data Modelling",],
       year: "2025",
     },
     {
-      title: "Climate Analysis Dashboard",
+      title: "COVID-19 Data Analysis Dashboard",
       description:
-        "Analyzed over 2 years of district-level weather data using Python, Pandas, and NumPy. Built a dashboard that helps visualize climate patterns and identify trends, enabling better decision-making with a clean, interactive interface.",
-      tags: ["Python", "Pandas", "NumPy", "DataViz"],
-      year: "2023",
+        "Developed an interactive dashboard to analyze global COVID-19 trends, including total cases, deaths, recoveries, testing, and vaccination data. Performed data cleaning and transformation to ensure accuracy and consistency. Built dynamic visualizations using Pivot Tables, charts, and KPI metrics to track country-wise performance and time-based trends. The dashboard provides insights into infection patterns, recovery rates, and vaccination progress, helping in better understanding of the pandemic impact..",
+      tools: ["Microsoft Excel", "Power Query", "Pivot Tables", "Charts","Data Modelling"],
+      year: "2024",
+    },
+    {
+      title: "Pizza Sales Dashboard",
+      description:
+        "Developed an interactive Pizza Sales Dashboard using Microsoft Excel to analyze overall sales performance and business trends. Performed data cleaning and transformation to prepare the dataset for analysis. Created key performance indicators such as total revenue, total orders, total quantity, and average price to monitor business metrics. Built dynamic visualizations using Pivot Tables, charts, and slicers to analyze sales by category, size, time period, and time slots. Conducted detailed analysis to identify top-selling pizzas, revenue distribution, and customer purchasing patterns. The dashboard provides clear and actionable insights, demonstrating strong skills in data analysis, visualization, and dashboard design.",
+      tools: ["Power BI", "Pivot Tables", "Charts", "Slicers", "Data Analysis"],
+      year: "2025",
+    },
+
+    // ✅ NEW PROJECT ADDED
+    {
+      title: "Telecom Customer Churn Analysis Dashboard",
+      description:
+        "Designed and built an interactive Telecom Customer Churn Analysis Dashboard using Power BI to analyze customer retention and churn behavior. Performed data cleaning and transformation using Power Query to ensure structured and reliable data. Created key performance indicators such as total customers, churned customers, revenue, and average revenue to monitor business performance. Utilized DAX to build calculated measures for churn rate, tenure analysis, and revenue insights. Designed dynamic visualizations to analyze customer demographics, contract types, payment methods, and tenure distribution. The dashboard provides actionable insights into factors influencing customer churn, helping businesses improve retention strategies and decision-making.",
+      tools: ["Power BI", "DAX", "Power Query", "Data Modeling", "Data Visualization"],
+      year: "2025",
     },
   ];
 
@@ -34,7 +58,7 @@ export default function Creations() {
   return (
     <section className="min-h-screen bg-gray-950 text-white flex flex-col items-center px-6 py-16">
       <h2 className="text-4xl font-extrabold mb-12 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
-        ✨ My Creations
+        My Projects
       </h2>
 
       {/* Embla Carousel */}
@@ -60,17 +84,29 @@ export default function Creations() {
                 </div>
 
                 <div>
-                  {/* Tags */}
+                  {/* Tools */}
                   <div className="flex flex-wrap gap-2 mb-3">
-                    {proj.tags.map((tag, i) => (
+                    {proj.tools.map((tool, i) => (
                       <span
                         key={i}
                         className="px-3 py-1 bg-gray-800/60 text-purple-300 text-xs rounded-full"
                       >
-                        {tag}
+                        {tool}
                       </span>
                     ))}
                   </div>
+
+                  {/* PDF Link */}
+                  {proj.pdf && (
+                    <a
+                      href={proj.pdf}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-block mb-3 px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition"
+                    >
+                      View PDF
+                    </a>
+                  )}
 
                   {/* Year */}
                   <p className="text-gray-500 text-xs">📅 {proj.year}</p>
