@@ -28,6 +28,7 @@ export default function Creations() {
         "Evaluated retail sales data containing 2000+ transactions to identify patterns in revenue, profit, and customer purchasing behavior. Organized and refined datasets using Excel functions for accurate reporting. Constructed Pivot Tables and charts to summarize key metrics. Created an interactive dashboard to present regional performance, product trends, and monthly sales insights.",
       tools: ["Microsoft Excel", "Pivot Tables", "Charts", "Slicers","Power Query","Data Modelling",],
       year: "2025",
+      pdf: "/Print2.pdf",
     },
     {
       title: "COVID-19 Data Analysis Dashboard",
@@ -35,6 +36,7 @@ export default function Creations() {
         "Developed an interactive dashboard to analyze global COVID-19 trends, including total cases, deaths, recoveries, testing, and vaccination data. Performed data cleaning and transformation to ensure accuracy and consistency. Built dynamic visualizations using Pivot Tables, charts, and KPI metrics to track country-wise performance and time-based trends. The dashboard provides insights into infection patterns, recovery rates, and vaccination progress, helping in better understanding of the pandemic impact..",
       tools: ["Microsoft Excel", "Power Query", "Pivot Tables", "Charts","Data Modelling"],
       year: "2024",
+      pdf: "/PRINT.pdf",
     },
     {
       title: "Pizza Sales Dashboard",
