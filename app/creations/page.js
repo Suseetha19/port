@@ -12,7 +12,7 @@ export default function Creations() {
         "Examined road accident datasets to uncover patterns in accident frequency, severity, and environmental conditions. Performed data preprocessing and transformation to ensure accuracy and consistency. Created calculated measures using DAX to evaluate key metrics and relationships. Designed an interactive dashboard to highlight high-risk locations, vehicle involvement, and road condition impacts for safety insights.",
       tools: ["Power BI", "DAX", "Power Query", "Data Modeling"],
       year: "2025",
-      pdf: "/UK ROAD.pdf",
+      pdf: "/UK-ROAD.pdf",
     },
     {
       title: "Movies Analysis Dashboard",
