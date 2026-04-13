@@ -12,7 +12,7 @@ export default function Creations() {
         "Examined road accident datasets to uncover patterns in accident frequency, severity, and environmental conditions. Performed data preprocessing and transformation to ensure accuracy and consistency. Created calculated measures using DAX to evaluate key metrics and relationships. Designed an interactive dashboard to highlight high-risk locations, vehicle involvement, and road condition impacts for safety insights.",
       tools: ["Power BI", "DAX", "Power Query", "Data Modeling"],
       year: "2025",
-      pdf: "/UK.pdf",
+      pdf: "/UK ROAD.pdf",
     },
     {
       title: "Movies Analysis Dashboard",
@@ -20,6 +20,7 @@ export default function Creations() {
         "Explored movie datasets to identify trends in ratings, revenue, genres, and audience engagement. Conducted data cleaning and transformation to maintain structured and reliable data. Generated calculated metrics using DAX for performance evaluation. Designed a dynamic dashboard to present genre-wise distribution, revenue insights, and popularity patterns effectively.",
       tools: ["Power BI", "DAX", "Data Visualization", "Power Query"],
       year: "2025",
+      pdf: "/M.pdf",
     },
     {
       title: "Sales Analysis Dashboard",
@@ -41,6 +42,7 @@ export default function Creations() {
         "Developed an interactive Pizza Sales Dashboard using Microsoft Excel to analyze overall sales performance and business trends. Performed data cleaning and transformation to prepare the dataset for analysis. Created key performance indicators such as total revenue, total orders, total quantity, and average price to monitor business metrics. Built dynamic visualizations using Pivot Tables, charts, and slicers to analyze sales by category, size, time period, and time slots. Conducted detailed analysis to identify top-selling pizzas, revenue distribution, and customer purchasing patterns. The dashboard provides clear and actionable insights, demonstrating strong skills in data analysis, visualization, and dashboard design.",
       tools: ["Power BI", "Pivot Tables", "Charts", "Slicers", "Data Analysis"],
       year: "2025",
+      pdf: "/pizza.pdf",
     },
 
     // ✅ NEW PROJECT ADDED
@@ -50,6 +52,7 @@ export default function Creations() {
         "Designed and built an interactive Telecom Customer Churn Analysis Dashboard using Power BI to analyze customer retention and churn behavior. Performed data cleaning and transformation using Power Query to ensure structured and reliable data. Created key performance indicators such as total customers, churned customers, revenue, and average revenue to monitor business performance. Utilized DAX to build calculated measures for churn rate, tenure analysis, and revenue insights. Designed dynamic visualizations to analyze customer demographics, contract types, payment methods, and tenure distribution. The dashboard provides actionable insights into factors influencing customer churn, helping businesses improve retention strategies and decision-making.",
       tools: ["Power BI", "DAX", "Power Query", "Data Modeling", "Data Visualization"],
       year: "2025",
+       pdf: "/telecom.pdf",
     },
   ];
 
