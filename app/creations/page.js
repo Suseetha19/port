@@ -20,7 +20,7 @@ export default function Creations() {
         "Explored movie datasets to identify trends in ratings, revenue, genres, and audience engagement. Conducted data cleaning and transformation to maintain structured and reliable data. Generated calculated metrics using DAX for performance evaluation. Designed a dynamic dashboard to present genre-wise distribution, revenue insights, and popularity patterns effectively.",
       tools: ["Power BI", "DAX", "Data Visualization", "Power Query"],
       year: "2025",
-      pdf: "/movies.pdf",
+      pdf: "/moviess.pdf",
     },
     {
       title: "Sales Analysis Dashboard",
